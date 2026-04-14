@@ -9,6 +9,7 @@
 6.git log
 7.git merge "branch_name"
 8.git rebase "branch_name"
+9.gti rebase -i HEAD~4
 ```
 1.git add .: Prepares all modified and new files to be included in the next staging.
 
@@ -26,7 +27,7 @@
 
 8.git rebase "branch_name": Do same like merge but there is no extra merge commit is occured.
 
-### Screenshot of operation
+### 2.Screenshot of operation
 
 1.Branch creation
 <img src="./img/branch_creation.png">
@@ -37,7 +38,7 @@
 2.Payment Branch history
 <img src="./img/payment_branch_history.png">
 
-### 2.Difference between merge and rebase
+### 3.Difference between merge and rebase
 
 *Merge keep track changes of both branch , which change come from which branch it is is noticible
 
@@ -53,3 +54,13 @@ In screenshot, merge and rebase behaviour is given
 
 3.Rebase(Payment feature into profile)
 <img src="./img/rebase payment into profile.png">
+
+### 4.Interactive rebase
+*gti rebase -i HEAD~4, this give last 4 commit in nano editor and it possible to change through requirement
+Here , it possible to change commit message by reword and combine multiple commit to single one by squash
+
+1.Reword and squash operaion
+<img src="./img/reword_squash.png">
+
+2.Commit history after performing reword and squash operation
+<img src="./img/after_squashed_reword.png">
